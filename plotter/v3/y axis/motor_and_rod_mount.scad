@@ -19,7 +19,7 @@ module MotorMount(border_width=2, height=10, fit_factor=1.025) {
 }
 
 module Structure(rod_separation=60, rod_radius=2,thickness=12, fit_factor=1.05) {
-    motor_height=50;
+    motor_height=60;
     // foot pads module
     module FootPad(h=4) {
         difference() {
@@ -52,7 +52,7 @@ module Structure(rod_separation=60, rod_radius=2,thickness=12, fit_factor=1.05) 
 
 module MotorAndRodMount() {
     Structure();
-    translate([36, -19, 50]) MotorMount(height=12);
+    translate([36, -19, 60]) MotorMount(height=12);
 }
 
 MotorAndRodMount($fs=.5, $fa=.5);

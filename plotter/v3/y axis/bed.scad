@@ -1,5 +1,5 @@
 module Bed(height=8, thickness=10, rod_separation=60, rod_radius=2, screw_radius=1.6,
-            gap=15, fit_factor=1.15, top_thickness=8, hole_radius=7) {
+            gap=15, fit_factor=1.15, top_thickness=8, hole_radius=15) {
                 
     // Foot Module
     module Foot(gap=15, thickness=10, fit_factor=1.15, rod_radius=2) {
@@ -27,7 +27,7 @@ module Bed(height=8, thickness=10, rod_separation=60, rod_radius=2, screw_radius
             translate([-5,13,height/2-3]) cylinder(r=3, h=4);
             translate([5,13,-1-height/2]) cylinder(r=screw_radius, h=height+2);
             translate([-5,13,-1-height/2]) cylinder(r=screw_radius, h=height+2);
-            translate([0,-rod_separation/2+hole_radius,-height/2-1])
+            translate([0,-rod_separation/2+hole_radius+4,-height/2-1])
                 cylinder(r=hole_radius, h=height+4);
         }
         
